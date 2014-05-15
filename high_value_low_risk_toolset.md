@@ -8,7 +8,7 @@ I think it's fair to say that application development for the web is truly a min
 
 The decisions we make today, and the tools, languages or platforms we use will all be subjected to this concept of change.
 
-In this document want to explain my view on how to manage this situation, and what I believe to be a sound technical approach for application development in the web eco-system, at this point in time.
+In this document I'm going to explain my view on how to manage this situation, and what I believe to be a sound approach to application development in the web eco-system, at this point in time.
 
 ## Core values
 
@@ -76,15 +76,15 @@ So now we're actually entering into the concrete technical domain. Given the sta
 
 Let's leave out the business logic or controller code for a while and assume we have data that we want to use to produce content. Templating tools and libraries today all fit into a range of either supporting more or less _logic_. By _logic_ we mean, the degree of which we can program or do actual language API calls in the templates themselves.
 
-In my opinion are templating libraries with less logic the best choice.
+In my opinion are templating libraries with less logic the better choice.
 
 Once again, this is a dear and [heavily][TP1] [debated][TP2] [issue][TP3]. I think the real smell of too much logic code in the templates is that your're more or less programming across a context and language boundary.
 
 A, perhaps contrived, but obvious example would be JSP/JSTL code that invokes Java methods.
 
-The other side of the spectrum is component-based template solutions, which means there is **no** logic in the templates, at all. To this I would like to raise a small warning and say that it is not always easy or clear to understand how components map to content.
+The other side of the spectrum is component-based template solutions, which means there is **no** logic in the templates, at all.
 
-Also, let's not forget about the separation in the work process. Content design and template authoring may have less to do with core business logic, so the right template solution might allow for value enhancement without changes to the layers _below_.
+Let's not forget about the separation in the work process. Content design and template authoring may have less to do with core business logic, so the right template solution might allow for value enhancement without changes to the layers _below_.
 
    [TP1]: http://www.workingsoftware.com.au/page/Your_templating_engine_sucks_and_everything_you_have_ever_written_is_spaghetti_code_yes_you
    [TP2]: http://www.ebaytechblog.com/2012/10/01/the-case-against-logic-less-templates
