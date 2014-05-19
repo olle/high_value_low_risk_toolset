@@ -77,6 +77,15 @@ _Remember that content and data are not necessarily the same thing. Content is m
 
 The if and how progressive enhancement is supported by some specific tool or technology in the tool set is a very important issue.
 
+Vertical cuts
+-------------
+
+[TODO]
+- Applications should be cut where it makes sense
+- Different technologies for different problems
+- Enhancement can be kept narrow
+- Re-use services and evolve an eco-system - `sites` are dead
+
 Templating
 ----------
 
