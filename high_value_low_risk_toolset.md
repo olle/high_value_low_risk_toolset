@@ -61,6 +61,8 @@ I'm convinced that we must view the target platform technologies, HTML, CSS and 
 
 For example, an ever recurring issue when using JavaScript widgets is the fallacy in thinking that using them does not require one to understand how they work. This often leads to higher technical debt to pay off - bugs that suddenly remove _more_ end user value than the widget actually provided to begin with.
 
+The target for our efforts are to build applications that will run in web browsers. We just can't get away from that fact. We must learn and understand the limits and use the abilities of that platform.
+
 Progressively enhanced content
 ------------------------------
 
@@ -146,23 +148,59 @@ Here are some people with [opinions][20] [against][21], [using][22] one of the p
    
 My point of view is that we should not buy in to the framework until we can se the benefit. We want to commit only when we understand why. Any given feature in one of the frameworks will most certainly be available as a small, separate, widget or library that does only that thing - perhaps even better.
 
-Frameworks provide a high benefit in the re-use they offer, with the risk that an early buy-in brings.
+Frameworks provide a high benefit in the re-use they offer, with the risk that an early buy-in brings. Once skinned or themed, they can allow very fast developmnet cycles and orthogonal iterations for pure style improvements, and business application development. The thing to understand is of course that it applies a constaint to this development - only the use of common, styled components are _allowed_. Such a constraint can of course is some situations be a pure win, if one wants to prevent heterogenous project results.
 
 ### Responsive design
 
-[TODO]
-- Responsive is progressive enhancement, but it comes at a cost - weight
-- Adaptive graphics, SVG, embedded and generated Sprite-Maps, no bitmaps
+To me responsive design is all about content. Great content and a responsive layout, adapting to the end user device - that's pure value - and this is probably the greatest return of investement that any stakeholder can get. That is also the sweet-spot for responsive design, where the design is not forced to be responsive but rather manifests the _design_ by simply being it. An example here is a grid-based layouts, where the content is mainly text, like an online-magazine.
+
+It's a bit more tricky in applications where the design serves a special purpouse - single page apps with panels, widgets, or custom buttons and form fields. The responsiveness in these cases may be just a way to _gracefully degrade_ the user experience and this is of course a compromise. I believe that lot's of apps of this sort, try to hard to be responsive and simply end up supporting some two, or three, modes or _sizes_. That's hardly responsive in my opinion.
+
+I think is clear, from the two approaches to responsiveness, that it's certainly not a one-size-fits-all tool. It needs be considered quite early in the development and design process, and choosing a tool that provides _grid-based responsiveness_ might mean very little if the application design just can't benefit from it.
+
+Also, one must not forget the [problems][23] of responsiveness, bloated pages and unecessary resource loading. The implication could be an even less usefull experience for those devices it was supposed to serve in the first place (mobile). This is still an area full of [suggestions][24], engineering and [cool ideas][25], so it can most certainly pay off to not commit too early.
+
+   [23]: http://www.guypo.com/mobile/performance-implications-of-responsive-design-book-contribution/
+   [24]: http://html5doctor.com/responsive-images-end-of-year-report/
+   [25]: http://responsiveicons.co.uk
 
 Enhanced content
 ----------------
 
+It should be clear from the title that I'm talking about continuing on the line of progressively enhancing any delivered content, into a higher end user value, by making it dynamic. Static content can be turned into a stream of information. Events can be sent as notifications. Page updates can be replaced by contextual reload of just some information.
+
+### JavaScript
+
+I'm not going to say too much about [JavaScript performance][26], but it's absolutely no longer a limiting factor. For our purpouses, it's more than able to support _any_ feature we might come to think of. 
+
+   [26]: http://www.sitepoint.com/javascript-doom/
+
+But extending value, with client-side engineering and rich applications that live on their own in the browser, requires a committment on some tools and best practices in my opinion. For starters, some rock solid [coding][26] [standards][27] for JavaScript. Most of this conventional wisdom will hint at [some][28] [important][29] [patterns][30] that are there to preserve sanity and clarity.
+
+   [26]: http://neil.rashbrook.org/Js.htm
+   [27]: http://javascript.crockford.com/code.html
+   [28]: http://www.google.com/search?q=javascript+module+pattern
+   [29]: http://wiki.commonjs.org/wiki/Modules/AsynchronousDefinition
+   [30]: http://www.html5rocks.com/en/tutorials/es6/promises/
+
+There's nothing wrong with programming in JavaScript - there I've said it. Still I would recommend using [jQuery][31] as a minimal library requirement for any client side engineering. Now the zealots of [nativejs-ism][32] do have a point in their argumentation against it - less page weight. But that could be viewed as a matter of performance optimization, which can be dealt with separately.
+
+   [31]: http://jquery.com   
+   [32]: http://youmightnotneedjquery.com
+
+_It's at this point that I need to make clear, that when I say "jQuery", I mean the DOM abstraction layer library. Absolutely, in no way, do I mean the widget library "jQuery UI"._
+
+In sort of a _handwaving_ manner I'm going to state that the [observer pattern][33] is your friend. It's of course part the nature of the DOM API, and unlocking and understanding the power of it, is a true eye opener - and the basis for some [really cool stuff][34] too. This is [not new stuff][35], but well worth digesting again. The important thing is to understand the relationship with progressive enhancement, and how orthogonal dynamic enhancements can actually be implemented. Learn it. Love it. Live it.
+
+   [33]: http://en.wikipedia.org/wiki/Observer_pattern
+   [34]: https://muut.com/blog/technology/riotjs-the-1kb-mvp-framework.html
+   [35]: http://yehudakatz.com/2009/04/20/evented-programming-with-jquery/
+
 [TODO]
 
-- Enhancing static to dynamic
-- Entry-level widgets/plug-ins jQuery, with standards
 - Frameworks are full buy-ins, libraries are more composable
-- Responsible development: modular, test-driven, require, promises, open to optimize
+- Data-binding, the current hype
+- Test-driven development
 - From Ajax to WebSockets, client-server vs. mesh
 
 ## References
