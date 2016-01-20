@@ -1,7 +1,7 @@
 Title:   A High Value Low Risk Tool Set  
 Author:  Olle Törnström toernstroem@synyx.de  
 Date:    2014-05-15 -- 2014-08-29  
-Version: 0.7
+Version: 0.8
 
 A High Value Low Risk Tool Set
 ==============================
@@ -122,7 +122,7 @@ Another thing to consider regarding templating is what benefits there are from c
 Styling
 -------
 
-With the risk of sounding like a broken record - again, my previous statements about core values, leaky abstractions and progressive enhancement apply to styling or CSS too. Added to that, I think it we have to recognized that CSS authoring (or development) is very much a practiced craft. There are of course specs, but boy let me tell you, did the browsers get them wrong. At least they choose to interpret them differently.
+With the risk of sounding like a broken record - again, my previous statements about core values, leaky abstractions and progressive enhancement apply to styling or CSS too. Added to that, I think we have to recognize that CSS authoring (or development) is very much a practiced craft. There are of course specs, but boy let me tell you, did the browsers get them wrong. At least they choose to interpret them differently.
 
 First, please understand that there is a [great][13] [body][14] of [work][15] on the [matter][16], and that CSS also requires [design and structure][17], just as any other part of your application.
 
@@ -148,13 +148,13 @@ So there's a big promise typically made by [styling][18] [frameworks][19] out th
 
    [18]: http://getbootstrap.com
    [19]: http://foundation.zurb.com
-   
+
 Here are some people with [opinions][20] [against][21], [using][22] one of the popular frameworks. I think you should read up on their views, and other discussions you might find on the issue.
 
    [20]: http://blog.idyllic-software.com/why-we-dont-use-twitter-bootstrap/
    [21]: http://halanstevens.com/blog/bootstrap-youre-doing-it-wrong/
    [22]: http://fourkitchens.com/blog/2013/10/09/you-dont-need-bootstrap
-   
+
 My point of view is that we should not buy in to the framework until we can se the benefit. We want to commit only when we understand why. Any given feature in one of the frameworks will most certainly be available as a small, separate, widget or library that does only that thing - perhaps even better.
 
 Frameworks provide a high benefit in the re-use they offer, with the risk that an early buy-in brings. Once skinned or themed, they can allow very fast development cycles and orthogonal iterations for pure style improvements, and business application development. The thing to understand is of course that it applies a constraint - only the use of commonly styled components are _allowed_. Such a constraint can of course in some situations be a pure win, if one wants to prevent heterogenous project results.
@@ -182,7 +182,7 @@ It should be clear from the title that I'm talking about continuing on the line 
 
 ### JavaScript
 
-I'm not going to say too much about [JavaScript performance][26], but it's absolutely no longer a limiting factor. For our purposes, it's more than able to support _any_ feature we might come to think of. 
+I'm not going to say too much about [JavaScript performance][26], but it's absolutely no longer a limiting factor. For our purposes, it's more than able to support _any_ feature we might come to think of.
 
    [26]: http://www.sitepoint.com/javascript-doom/
 
@@ -226,4 +226,3 @@ _This section is a quick draft of issues I didn't have time to write about, but 
    [37]: http://socket.io
 
 - A future with mesh; Currently there's the possibility, based on Web RTC and some other technologies, that we could see a more distributed or P2P-based direct use for client side web applications. This is real _future tech_ in web development in my opinion, but we should be aware that the cost and time put in proper JavaScript-development and deeper domain knowledge, will be a great win for those future possibilities.
-
