@@ -1,5 +1,5 @@
 Title:   A High Value Low Risk Tool Set  
-Author:  Olle Törnström toernstroem@synyx.de  
+Author:  Olle Törnström toernstroem[at]synyx.de  
 Date:    2014-05-15 -- 2014-08-29  
 Version: 0.8
 
