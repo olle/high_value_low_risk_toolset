@@ -1,8 +1,8 @@
 # High Value Low Risk Toolset
 
 In 2014 I wrote down my thoughts on frontend software development toolsets, as
-a reaction to a request for a rather strict evaluation on the (at that time)
-popular frameworks, for a customer project.
+a reaction to a request for a rather strict evaluation of the (at the time)
+most popular frameworks, for a customer project.
 
 **[high_value_low_risk_toolset.md](./high_value_low_risk_toolset.md)**
 
